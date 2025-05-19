@@ -1,0 +1,164 @@
+/* Reset Default Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Ensures padding & border don't affect width or height */
+}
+
+/* New Default Styling */
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: hsl(228, 12%, 48%);
+}
+
+/* * */
+/* MAIN STYLING */
+main {
+  background-color: hsl(0, 0%, 100%);
+  width: 40em;
+  height: 30em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; /* make items strech vertically */
+  border-radius: 0.6em;
+}
+
+.img-container {
+  flex: 1 0 50%; /* make both columns take equal width, expand equally, and doesn't shrink */
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*scales to cover the container, maintaining its aspect ratio, but may get cropped */
+  border-top-left-radius: 0.6em;
+  border-bottom-left-radius: 0.6em;
+  display: block;
+}
+
+.text-container {
+  flex: 2 0 50%; /* make both columns take equal width, expand equally, and doesn't shrink */
+  padding: 2em;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 1.6em;
+}
+
+h1 {
+  font-family: "Fraunces";
+  color: hsl(212, 21%, 14%);
+  font-size: 2.2em;
+  line-height: 1em;
+  margin-bottom: 0.6em;
+}
+
+p {
+  font-weight: 500;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  margin-bottom: 1.8em;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.discount-price {
+  font-family: "Fraunces";
+  color: hsl(158, 36%, 37%);
+  font-size: 2.1em;
+  font-weight: 700;
+  margin-right: 0.7em;
+}
+
+.normal-price {
+  font-weight: 500;
+  font-size: 0.95em;
+  text-decoration: line-through;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  border: 0;
+  border-radius: 0.5em;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2em;
+  text-align: center;
+  width: 100%; /*make the button take full width */
+}
+
+.button-icon {
+  width: 1.2em;
+  height: auto;
+  margin-right: 1em;
+}
+
+h4 {
+  font-size: 1.15em;
+}
+
+button:hover {
+  background-color: hsl(158, 42%, 18%);
+  cursor: pointer;
+}
+
+.attribution {
+  margin-top: 5em;
+}
+
+/* * */
+/* MOBILE VERSION */
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+    width: 85%;
+    height: auto;
+  }
+
+  .product-image {
+    border-top-right-radius: 0.6em;
+    border-bottom-left-radius: 0;
+  }
+
+  .img-container,
+  .text-container {
+    flex: 1;
+  }
+
+  h3 {
+    font-size: 0.7em;
+  }
+
+  h1 {
+    font-size: 1.85em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+  .attribution {
+    font-size: 0.8em;
+  }
+}
